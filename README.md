@@ -2,7 +2,7 @@
 
 ## Date Time: 26-Mar-2023 at 09:00 AM IST
 
-![Jagadish Madikonda |120x120](./Documentation/Images/mjr.jpg)
+![Jagadish Madikonda |150x150](./Documentation/Images/mjr.jpg)
 
 ## Java Training acquired
 
