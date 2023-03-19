@@ -14,4 +14,9 @@
 
 ## Pull Request process, Continues Integration and Continues Delivery
 
+References:
+
+> 1. https://learn.microsoft.com/en-us/azure/devops/repos/git/about-pull-requests?view=azure-devops
+> 2. https://learn.microsoft.com/en-us/azure/architecture/example-scenario/apps/devops-dotnet-baseline
+
 ![Jagadish Madikonda |150x150](./Documentation/Images/Devops-Image.png)
