@@ -20,3 +20,5 @@ References:
 > 2. https://learn.microsoft.com/en-us/azure/architecture/example-scenario/apps/devops-dotnet-baseline
 
 ![Jagadish Madikonda |150x150](./Documentation/Images/Devops-Image.png)
+
+![Jagadish Madikonda |150x150](./Documentation/Images/Image1.png)
