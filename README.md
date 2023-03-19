@@ -1,4 +1,4 @@
-# Madikonda Jagadish -Sand Glass - JDBC - JDBC with Sqlite Console App
+# Madikonda Jagadish
 
 ## Date Time: 26-Mar-2023 at 09:00 AM IST
 
