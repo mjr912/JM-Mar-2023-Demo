@@ -52,7 +52,23 @@ MySQL Database: This application uses MySQL database for storing the employee da
  >1. Clone the repository to your local machine.
  >2. Open the project in your Java IDE(e.g. Eclipse, IntelliJ IDEA, NetBeans).
  >3. Build and run the Login.java file.
- >4. The application opens the login window. Login with the correct credentails and follow the prompt for add, view, delete employees. 
+ >4. The application opens the login window. Login with the correct credentails and follow the prompt for add, view, delete employees.
 
+# Login Page 
+
+ >1. This page verifies the user credentails and if they are correct then it will allow for the Home page.
+ >2. If the credentials are wrong, it will display a warning as details are incorrect.
+
+![Jagadish Madikonda |150x150](./Images/login-page.png)
+
+# Home Page
+
+![Jagadish Madikonda |150x150](./Images/Main-page.png)
+
+# Add an Employee
+
+![Jagadish Madikonda |150x150](./Images/Add-employee.png)
+
+# 
 
 
