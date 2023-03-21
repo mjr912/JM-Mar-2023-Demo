@@ -1,6 +1,6 @@
 # Madikonda Jagadish
 
-## Date Time: 26-Mar-2023 at 09:00 AM IST
+## Date Time: 20-Mar-2023 at 05:00 AM IST
 
 ![Jagadish Madikonda |150x150](./Images/mjr.png)
 
