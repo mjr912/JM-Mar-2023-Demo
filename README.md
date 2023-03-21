@@ -2,7 +2,7 @@
 
 ## Date Time: 26-Mar-2023 at 09:00 AM IST
 
-![Jagadish Madikonda |150x150](./Documentation/Images/mjr.png)
+![Jagadish Madikonda |150x150](./Images/mjr.png)
 
 ## Java Training acquired
 
@@ -19,9 +19,9 @@ References:
 > 1. https://learn.microsoft.com/en-us/azure/devops/repos/git/about-pull-requests?view=azure-devops
 > 2. https://learn.microsoft.com/en-us/azure/architecture/example-scenario/apps/devops-dotnet-baseline
 
-![Jagadish Madikonda |150x150](./Documentation/Images/Devops-Image.png)
+![Jagadish Madikonda |150x150](./Images/Devops-Image.png)
 
-![Jagadish Madikonda |150x150](./Documentation/Images/Image1.png)
+![Jagadish Madikonda |150x150](./Images/Image1.png)
 
 #  Employee Data Management using JavaFX
 
@@ -39,4 +39,20 @@ It has the following functionalities:
 
  >1. Login and ForgetPassword classes: These classes are responsible for the login into the system and to know the password if the user forgot it. 
  >2. Main class: This class is reponsible for selecting the various operation to be done in this application.
- >3. 
+ >3. DeleteEmployee: This class is to delete an employee data from the database.
+ >4. ViewEmployee: This class is responsible to view the employee data.
+ >5. AddEmployee: This class is responsible for adding an employee information into teh database.
+
+# Prerequisites
+
+MySQL Database: This application uses MySQL database for storing the employee data. Create a database named employeeDetails for storing the employee information and Admin for storing the admin credentials. The db_admin.sql contains the sql query used to create the admin table for login and db_emploeeDetails.sql contains the sql query used to create the employeeDetails table for storing the employee details. 
+
+# Installation
+
+ >1. Clone the repository to your local machine.
+ >2. Open the project in your Java IDE(e.g. Eclipse, IntelliJ IDEA, NetBeans).
+ >3. Build and run the Login.java file.
+ >4. The application opens the login window. Login with the correct credentails and follow the prompt for add, view, delete employees. 
+
+
+
