@@ -90,4 +90,11 @@ MySQL Database: This application uses MySQL database for storing the employee da
 
 ![Jagadish Madikonda |150x150](./Images/delete-employee.png)
 
-
+# Code Description
+ 
+ >1. Create the pages which extend Application and override start method
+ https://github.com/mjr912/mj-mar-2023-demo/blob/main/EmployeeRegistration/src/main/java/com/example/employeeregistration/LoginPage.java
+ >2. Create a controller class for the employee details class which is used to evaluate the actions performed and create a table which will initialize the table in the initialize method and create a method connection for retriving the data from database and add to table.
+ https://github.com/mjr912/mj-mar-2023-demo/blob/main/EmployeeRegistration/src/main/java/com/example/employeeregistration/EmployeeDetailsController.java
+ >3. Create the database class for connecting to the database.
+ https://github.com/mjr912/mj-mar-2023-demo/blob/main/EmployeeRegistration/src/main/java/com/example/employeeregistration/DatabaseConnection.java
