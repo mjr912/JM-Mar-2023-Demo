@@ -69,6 +69,16 @@ MySQL Database: This application uses MySQL database for storing the employee da
 
 ![Jagadish Madikonda |150x150](./Images/Add-employee.png)
 
-# 
+# View Employee
+
+![Jagadish Madikonda |150x150](./Images/view-employee.png)
+
+# Employee Data
+
+![Jagadish Madikonda |150x150](./Images/employee-data.png)
+
+# Delete Employee
+
+![Jagadish Madikonda |150x150](./Images/delete-employee.png)
 
 
