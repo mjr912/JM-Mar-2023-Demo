@@ -84,7 +84,7 @@ It has the following functionalities:
 
 ## Employee Data
 
-
+![Jagadish Madikonda |150x150](./Images/employee-data.png)
 
 ## Delete Employee
 
