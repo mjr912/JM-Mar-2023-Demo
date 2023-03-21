@@ -54,6 +54,15 @@ MySQL Database: This application uses MySQL database for storing the employee da
  >3. Build and run the Login.java file.
  >4. The application opens the login window. Login with the correct credentails and follow the prompt for add, view, delete employees.
 
+# Usage
+
+## This application is designed to manage the employee details
+
+ >1. Login in with the correct credentails and add the employee details by using add employee page.
+ >2. You can retrive the data of an employee based on the mentioned fields using the view employee page.
+ >3. You can delete the data of an employee based on the employee id using the delete employee page.  
+ >4. By using the forget password link one know the password associated with respective userid
+
 # Login Page 
 
  >1. This page verifies the user credentails and if they are correct then it will allow for the Home page.
