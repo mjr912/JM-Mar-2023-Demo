@@ -41,11 +41,11 @@ It has the following functionalities:
  >2. Main class: This class is reponsible for selecting the various operation to be done in this application.
  >3. DeleteEmployee: This class is to delete an employee data from the database.
  >4. ViewEmployee: This class is responsible to view the employee data.
- >5. AddEmployee: This class is responsible for adding an employee information into teh database.
+ >5. AddEmployee: This class is responsible for adding an employee information into the database.
 
 # Prerequisites
 
-MySQL Database: This application uses MySQL database for storing the employee data. Create a database named employeeDetails for storing the employee information and Admin for storing the admin credentials. The db_admin.sql contains the sql query used to create the admin table for login and db_emploeeDetails.sql contains the sql query used to create the employeeDetails table for storing the employee details. 
+MySQL Database: This application uses MySQL database for storing the employee data. Create a database named employeeDetails for storing the employee information and Admin for storing the admin credentials. The db_admin.sql contains the sql query used to create the admin table for login and db_employeeDetails.sql contains the sql query used to create the employeeDetails table for storing the employee details. 
 
 # Installation
 
