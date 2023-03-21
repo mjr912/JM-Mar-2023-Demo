@@ -6,15 +6,15 @@
 
 ## Java Training acquired
 
-> 1. JAVA SWING: Subtle understanding of Swing components and functionalities and their role in creating customized and complex applications. Worked on basic applications such as Calculator, Basic sEmployee Management System etc., the inclusion of JDBC and OOPS concepts that makes it more custom-oriented and user interactive.
+> 1. **JAVA SWING**: Subtle understanding of Swing components and functionalities and their role in creating customized and complex applications. Worked on basic applications such as Calculator, Basic sEmployee Management System etc., the inclusion of JDBC and OOPS concepts that makes it more custom-oriented and user interactive.
 
-> 2. JAVA FX: Basic overview and brief understanding of JAVA FX and its use cases that can be implemented for creating applications. Worked on simple applications such as Calculator,Login Forms and To-do App where we can track attendance and add new employees and explored various components involved that make the portrayal of the application rich and interactive.
+> 2. **JAVAFX**: Basic overview and brief understanding of JAVA FX and its use cases that can be implemented for creating applications. Worked on simple applications such as Calculator,Login Forms and To-do App where we can track attendance and add new employees and explored various components involved that make the portrayal of the application rich and interactive.
 
-> 3. JAVA: Good understanding of OOPS concepts and JDBC.Currently, at a beginner’s level, but constantly working to build and sharpen my skills that can contribute to overall growth.
+> 3. **JAVA**: Good understanding of OOPS concepts and JDBC.Currently, at a beginner’s level, but constantly working to build and sharpen my skills that can contribute to overall growth.
 
 ## Pull Request process, Continues Integration and Continues Delivery
 
-References:
+**References**:
 
 > 1. https://learn.microsoft.com/en-us/azure/devops/repos/git/about-pull-requests?view=azure-devops
 > 2. https://learn.microsoft.com/en-us/azure/architecture/example-scenario/apps/devops-dotnet-baseline
@@ -37,15 +37,15 @@ It has the following functionalities:
 # Classes:
  This application consists of the following classes
 
- >1. Login and ForgetPassword classes: These classes are responsible for the login into the system and to know the password if the user forgot it. 
- >2. Main class: This class is reponsible for selecting the various operation to be done in this application.
- >3. DeleteEmployee: This class is to delete an employee data from the database.
- >4. ViewEmployee: This class is responsible to view the employee data.
- >5. AddEmployee: This class is responsible for adding an employee information into the database.
+ >1. **Login and ForgetPassword classes**: These classes are responsible for the login into the system and to know the password if the user forgot it. 
+ >2. **Main class**: This class is reponsible for selecting the various operation to be done in this application.
+ >3. **DeleteEmployee**: This class is to delete an employee data from the database.
+ >4. **ViewEmployee**: This class is responsible to view the employee data.
+ >5. **AddEmployee**: This class is responsible for adding an employee information into the database.
 
 # Prerequisites
 
-MySQL Database: This application uses MySQL database for storing the employee data. Create a database named employeeDetails for storing the employee information and Admin for storing the admin credentials. The db_admin.sql contains the sql query used to create the admin table for login and db_employeeDetails.sql contains the sql query used to create the employeeDetails table for storing the employee details. 
+**MySQL Database**: This application uses MySQL database for storing the employee data. Create a database named employeeDetails for storing the employee information and Admin for storing the admin credentials. The db_admin.sql contains the sql query used to create the admin table for login and db_employeeDetails.sql contains the sql query used to create the employeeDetails table for storing the employee details. 
 
 # Installation
 
