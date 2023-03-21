@@ -29,10 +29,10 @@ This is a JavaFX application for managing the employee data
 
 It has the following functionalities:
 
-  >1. Admin Login: Allows the admin to login into the system.
-  >2. Add Employee: Allows you to add a new employee into the system by taking personal and professional details
-  >3. View Employee: Allows you to view the data of the employee based on their respective fields like name, employeeId, email.
-  >4. Delete Employee: Allows you to delete the data of an employee based on their employeeId
+  >1. **Admin Login**: Allows the admin to login into the system.
+  >2. **Add Employee**: Allows you to add a new employee into the system by taking personal and professional details
+  >3. **View Employee**: Allows you to view the data of the employee based on their respective fields like name, employeeId, email.
+  >4. **Delete Employee**: Allows you to delete the data of an employee based on their employeeId
 
 # Classes:
  This application consists of the following classes
