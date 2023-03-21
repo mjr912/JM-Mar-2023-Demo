@@ -12,8 +12,10 @@ public class EmployeeDetails extends Application {
     @Override
     public void start(Stage stage) throws IOException{
         FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("hello-view.fxml"));
-        Scene scene=new Scene(fxmlLoader.load(),500,500);
+        Scene scene=new Scene(fxmlLoader.load(),1200,600);
+        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         stage.setScene(scene);
+        stage.setTitle("Employee Details");
         EmployeeDetailsController controller = fxmlLoader.getController();
         controller.connection(field,val);
         stage.show();

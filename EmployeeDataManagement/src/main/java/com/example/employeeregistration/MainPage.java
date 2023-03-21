@@ -45,6 +45,10 @@ public class MainPage extends Application {
             }
         });
 
+        Button updateEmployee=new Button("Update Employee");
+        updateEmployee.setStyle("-fx-font-size:16px;-fx-background-color:#4CBB17");
+        updateEmployee.setPrefSize(200,40);
+        //updateEmployee.setOnAction();
 
         Button deleteEmployee=new Button("Delete Employee");
         deleteEmployee.setStyle("-fx-font-size:16px;-fx-background-color:#4CBB17");
