@@ -15,21 +15,27 @@ import javafx.stage.Stage;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.time.LocalDate;
+import java.util.Arrays;
 
 public class RegistrationPage extends Application {
     static Double i=0D;
-    ProgressBar progressBar;
-    ProgressIndicator progressIndicator;
+    private int Id=-1;
     EventHandler<ActionEvent> event;
+    Label firstName,lastName,userId,gender,address,permanentAddress,contactAddress,dob,emailId,mobileNumber,ctc,experience,employmentType;
+    TextField firstNameField,lastNameField,userIdField,emailField,numberField,ctcField,experienceField;
+    RadioButton maleRb,femaleRb,othersRb;
+    ToggleGroup bg;
+    TextArea permAddArea,contAddArea;
+    CheckBox checkBox1,agree;
+    DatePicker datePicker;
+    ComboBox<String > employeeTypeCbox;
+    Button button;
+
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) throws IOException, SQLException {
 
-
-        progressBar = new ProgressBar();
-        progressIndicator = new ProgressIndicator();
 
         Label label = new Label("Registration Page");
         label.setStyle("-fx-font-size:30px;-fx-text-fill:blue;-fx-font-weight:bold");
@@ -38,32 +44,32 @@ public class RegistrationPage extends Application {
         pane.setHgap(10);
         pane.setVgap(10);
 
-        Label firstName = new Label("First Name");
+        firstName = new Label("First Name");
         firstName.setStyle("-fx-font-size:18px;-fx-text-fill:blue");
-        TextField firstNameField = new TextField();
+        firstNameField = new TextField();
         firstNameField.setOnAction(event);
 
-        Label lastName = new Label("Last Name");
+        lastName = new Label("Last Name");
         lastName.setStyle("-fx-font-size:18px;-fx-text-fill:blue");
-        TextField lastNameField = new TextField();
+        lastNameField = new TextField();
         lastNameField.setPrefSize(220,30);
         lastNameField.setOnAction(event);
 
-        Label userId = new Label("User ID");
+        userId = new Label("User ID");
         userId.setStyle("-fx-font-size:18px;-fx-text-fill:blue");
-        TextField userIdField = new TextField();
+        userIdField = new TextField();
         userIdField.setOnAction(event);
 
-        Label gender = new Label("Gender");
+        gender = new Label("Gender");
         gender.setStyle("-fx-font-size:18px;-fx-text-fill:blue");
 
-        RadioButton maleRb = new RadioButton("Male");
+        maleRb = new RadioButton("Male");
         maleRb.setStyle("-fx-font-size:14px;-fx-text-fill:blue");
-        RadioButton femaleRb = new RadioButton("Female");
+        femaleRb = new RadioButton("Female");
         femaleRb.setStyle("-fx-font-size:14px;-fx-text-fill:blue");
-        RadioButton othersRb = new RadioButton("Others");
+        othersRb = new RadioButton("Others");
         othersRb.setStyle("-fx-font-size:14px;-fx-text-fill:blue");
-        ToggleGroup bg = new ToggleGroup();
+        bg = new ToggleGroup();
         maleRb.setToggleGroup(bg);
         femaleRb.setToggleGroup(bg);
         othersRb.setToggleGroup(bg);
@@ -73,8 +79,6 @@ public class RegistrationPage extends Application {
                 if (bg.getSelectedToggle().getUserData() != null) {
                     System.out.println(bg.getSelectedToggle().getUserData().toString());
                     i += Double.parseDouble(String.valueOf(1 / 13));
-                    progressBar.setProgress(i);
-                    progressIndicator.setProgress(i);
                 }
             }
         });
@@ -83,78 +87,74 @@ public class RegistrationPage extends Application {
         HBox hBox1 = new HBox(maleRb, femaleRb, othersRb);
         hBox1.setSpacing(10);
 
-        Label address = new Label("Address");
+        address = new Label("Address");
         address.setStyle("-fx-font-size:18px;-fx-text-fill:blue");
 
-        Label permanentAddress = new Label("Permanent Address");
+        permanentAddress = new Label("Permanent Address");
         permanentAddress.setStyle("-fx-font-size:18px;-fx-text-fill:blue");
-        TextArea permAddArea = new TextArea();
+        permAddArea = new TextArea();
         permAddArea.setPrefSize(200, 100);
 
         Label l = new Label();
         Label l1 = new Label();
 
-        Label contactAddress = new Label("Contact Address");
+        contactAddress = new Label("Contact Address");
         contactAddress.setStyle("-fx-font-size:18px;-fx-text-fill:blue");
-        TextArea contAddArea = new TextArea();
+        contAddArea = new TextArea();
         contAddArea.setPrefSize(200, 100);
 
-        CheckBox checkBox1 = new CheckBox("Contact Address same as permanent");
+        checkBox1 = new CheckBox("Contact Address same as permanent");
         checkBox1.setStyle("-fx-text-fill:blue");
         checkBox1.setOnAction(e -> {
             if (checkBox1.isSelected()) {
                 i += Double.parseDouble(String.valueOf(1 / 13));
-                progressBar.setProgress(i);
-                progressIndicator.setProgress(i);
                 contAddArea.setText(permAddArea.getText());
                 contactAddress.setDisable(true);
                 contAddArea.setDisable(true);
             } else {
                 i -= Double.parseDouble(String.valueOf(1 / 13));
-                progressBar.setProgress(i);
-                progressIndicator.setProgress(i);
                 contactAddress.setDisable(false);
                 contAddArea.setDisable(false);
             }
         });
 
-        Label dob = new Label("DOB");
+        dob = new Label("DOB");
         dob.setStyle("-fx-font-size:18px;-fx-text-fill:blue");
 
-        DatePicker datePicker = new DatePicker();
+        datePicker = new DatePicker();
         datePicker.setPrefSize(220, 30);
         datePicker.setOnAction(event);
 
 
-        Label emailId = new Label("Email ID");
+        emailId = new Label("Email ID");
         emailId.setStyle("-fx-font-size:18px;-fx-text-fill:blue");
-        TextField emailField = new TextField();
+        emailField = new TextField();
         emailField.setOnAction(event);
 
-        Label mobileNumber = new Label("Mobile Number");
+        mobileNumber = new Label("Mobile Number");
         mobileNumber.setStyle("-fx-font-size:18px;-fx-text-fill:blue");
-        TextField numberField = new TextField();
+        numberField = new TextField();
         numberField.setOnAction(event);
 
-        Label ctc = new Label("CTC");
+        ctc = new Label("CTC");
         ctc.setStyle("-fx-font-size:18px;-fx-text-fill:blue");
-        TextField ctcField = new TextField();
+        ctcField = new TextField();
         ctcField.setOnAction(event);
 
-        Label experience = new Label("Experience");
+        experience = new Label("Experience");
         experience.setStyle("-fx-font-size:18px;-fx-text-fill:blue");
-        TextField experienceField = new TextField();
+        experienceField = new TextField();
         experienceField.setOnAction(event);
 
 
-        Label employmentType = new Label("Employment Type");
+        employmentType = new Label("Employment Type");
         employmentType.setStyle("-fx-font-size:18px;-fx-text-fill:blue");
         String[] arr = {"Intern", "Developer", "Manager","Team Lead","Tester"};
-        ComboBox<String> employeeTypeCbox = new ComboBox<String>(FXCollections.observableArrayList(arr));
+        employeeTypeCbox = new ComboBox<String>(FXCollections.observableArrayList(arr));
         employeeTypeCbox.setPrefSize(220, 30);
         employeeTypeCbox.setOnAction(event);
 
-        CheckBox agree = new CheckBox("I agree with the Privacy Policy, Terms and Conditions");
+        agree = new CheckBox("I agree with the Privacy Policy, Terms and Conditions");
         agree.setStyle("-fx-font-size:16px;-fx-text-fill:blue");
         agree.setOnAction(event);
 
@@ -173,7 +173,7 @@ public class RegistrationPage extends Application {
         pane.setAlignment(Pos.CENTER);
 
 
-        Button button = new Button("Submit");
+        button = new Button("Submit");
         button.setStyle("-fx-font-size:16px;-fx-background-color:#4CBB17");
         button.setPrefSize(100, 30);
         button.setOnAction(actionEvent -> {
@@ -223,23 +223,94 @@ public class RegistrationPage extends Application {
         vBox.setSpacing(20);
         vBox.setBackground(background);
 
-        event = new EventHandler<ActionEvent>() {
-
-            public void handle(ActionEvent e) {
-                // set progress to different level of progressbar
-                i += Double.parseDouble(String.valueOf(1 / 13));
-                progressBar.setProgress(i);
-                progressIndicator.setProgress(i);
-            }
-        };
+        System.out.println("this is main class");
 
         Scene scene = new Scene(vBox, 850, 700);
         stage.setTitle("Add Employee");
         stage.setScene(scene);
         stage.show();
+        if(Id!=-1){
+            System.out.println("this is inside class");
+            update(stage);
+        }
+
+
     }
 
     public static void main(String[] args) {
         launch();
+    }
+
+    public void IdValue(int Id) throws IOException, SQLException {
+        this.Id=Id;
+        System.out.println(Id);
+        Stage stage=new Stage();
+        this.start(stage);
+    }
+
+    public void update(Stage stage) throws SQLException {
+        DatabaseConnection db=new DatabaseConnection();
+        Connection connectDb=db.getConnection();
+        Statement statement = connectDb.createStatement();
+        String query="select * from employeeDetails where UserID="+Id+";";
+        System.out.println(query);
+
+        ResultSet rs= statement.executeQuery(query);
+        rs.next();
+        System.out.println("first value is"+Integer.parseInt(rs.getString(1)));
+        System.out.println("jasdbasjfliskfnksanfsk");
+        userIdField.setText(rs.getString(1));
+        String str=rs.getString(2);
+        String[] name=str.split(" ");
+        System.out.println("array is"+ Arrays.toString(name));
+        firstNameField.setText(name[0]);
+        lastNameField.setText(name[1]);
+        System.out.println("This is secong");
+        String gen=rs.getString(3);
+        if(gen.equals("Male"))
+            bg.selectToggle(maleRb);
+        else if (gen.equals("Female")) {
+            bg.selectToggle(femaleRb);
+        }
+        else
+            bg.selectToggle(othersRb);
+        permAddArea.setText(rs.getString(4));
+        contAddArea.setText(rs.getString(5));
+        numberField.setText(rs.getString(6));
+        datePicker.setValue(LocalDate.parse(rs.getString(7)));
+        ctcField.setText(rs.getString(8));
+        experienceField.setText(rs.getString(9));
+        employeeTypeCbox.setValue(rs.getString(10));
+        emailField.setText(rs.getString(11));
+
+        button.setOnAction(event->{
+            String query1="update employeeDetails set UserId= ?, name= ?,gender= ?,PermanentAddress= ?,ContactAddress= ?,MobileNumber= ?,DOB= ?,CTC= ?,Experience= ?,EmployeeType= ?,email= ? where UserID="+Id+";";
+            try {
+                PreparedStatement ps=connectDb.prepareStatement(query1);
+                ps.setString(1,userIdField.getText());
+                ps.setString(2,firstNameField.getText()+lastNameField.getText());
+                ps.setString(3, bg.getSelectedToggle().toString());
+                ps.setString(4,permAddArea.getText());
+                ps.setString(5,contAddArea.getText());
+                ps.setString(6,numberField.getText());
+                ps.setString(7, String.valueOf(datePicker.getValue()));
+                ps.setString(8,ctcField.getText());
+                ps.setString(9,experienceField.getText());
+                ps.setString(10,employeeTypeCbox.getValue());
+                ps.setString(11,emailField.getText());
+                ps.executeUpdate();
+                System.out.println(employeeTypeCbox.getValue());
+                stage.close();
+                MainPage mp=new MainPage();
+                try {
+                    mp.start(stage);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+
+        });
     }
 }

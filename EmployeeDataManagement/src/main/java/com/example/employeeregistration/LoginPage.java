@@ -58,7 +58,6 @@ public class LoginPage extends Application {
             Connection connectDB=connect.getAdminConnection();
             if(!loginIDfield.getText().isEmpty() && !passwordfield.getText().isEmpty()) {
                 String query = "select * from admin where username= '" + loginIDfield.getText() + "' and password='" + passwordfield.getText() + "';";
-                System.out.println(query);
                 try {
                     Statement statement = connectDB.createStatement();
                     ResultSet rs = statement.executeQuery(query);

@@ -79,6 +79,9 @@ public class ViewEmployee extends Application {
                             throw new RuntimeException(e);
                         }
                     }
+                    else
+                        notification.setText("Enter the correct details");
+
                 } catch (SQLException e) {
                     notification.setText("Enter the correct details");
                 }

@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class MainPage extends Application {
     @Override
@@ -27,7 +28,7 @@ public class MainPage extends Application {
             stage.close();
             try {
                 rp.start(stage);
-            } catch (IOException e) {
+            } catch (IOException | SQLException e) {
                 throw new RuntimeException(e);
             }
         });
@@ -48,7 +49,15 @@ public class MainPage extends Application {
         Button updateEmployee=new Button("Update Employee");
         updateEmployee.setStyle("-fx-font-size:16px;-fx-background-color:#4CBB17");
         updateEmployee.setPrefSize(200,40);
-        //updateEmployee.setOnAction();
+        updateEmployee.setOnAction(event -> {
+            UpdateEmployee ue=new UpdateEmployee();
+            stage.close();
+            try {
+                ue.start(stage);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        });
 
         Button deleteEmployee=new Button("Delete Employee");
         deleteEmployee.setStyle("-fx-font-size:16px;-fx-background-color:#4CBB17");
@@ -83,17 +92,11 @@ public class MainPage extends Application {
         BackgroundImage backgroundImage=new BackgroundImage(image, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, BackgroundSize.DEFAULT);
         Background background=new Background(backgroundImage);
 
-        VBox vBox=new VBox(addEmployee,viewEmployee,deleteEmployee,logout);
+        VBox vBox=new VBox(addEmployee,viewEmployee,updateEmployee,deleteEmployee,logout);
         vBox.setAlignment(Pos.CENTER);
         vBox.setSpacing(20);
         vBox.setBackground(background);
-
         Scene scene = new Scene(vBox, 500, 500);
-        scene.setFill(new RadialGradient(
-                0, 0, 0, 0, 1, true, CycleMethod.NO_CYCLE,
-                new Stop(0, Color.web("#81c483")),
-                new Stop(1, Color.web("#fcc200")))
-        );
         stage.setTitle("Main Page");
         stage.setScene(scene);
         stage.show();
