@@ -86,6 +86,10 @@ It has the following functionalities:
 
 ![Jagadish Madikonda |150x150](./Images/employee-data.png)
 
+## Update Employee
+
+![Jagadish Madikonda |150x150](./Images/Update-employee.png)
+
 ## Delete Employee
 
 ![Jagadish Madikonda |150x150](./Images/delete-employee.png)
