@@ -80,7 +80,6 @@ It has the following functionalities:
 
 ## View Employee
 
-![Jagadish Madikonda |150x150](./Images/view-employee.png)
 
 ## Employee Data
 
